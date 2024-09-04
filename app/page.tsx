@@ -49,4 +49,4 @@ export default function Page() {
     </main>
   );
 }
-/*Continue from the following link https://nextjs.org/learn/dashboard-app/creating-layouts-and-pages*/
+/*Continue from the following link https://nextjs.org/learn/dashboard-app/setting-up-your-database*/
