@@ -4,8 +4,18 @@ import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
 import { lusitana } from '@/app/ui/fonts';
 import Image from 'next/image';
+import { fetchInvoicesPages } from './lib/data';
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string,
+    page?: string,
+  },
+}) {
+  const query = searchParams?.query || '';
+  const currentPage = Number(searchParams?.page) || 1;
   return (
     <main className="flex min-h-screen flex-col p-6">
       <div className={styles.shape} />
@@ -49,4 +59,3 @@ export default function Page() {
     </main>
   );
 }
-/*Continue from the following link https://nextjs.org/learn/dashboard-app/setting-up-your-database*/
